@@ -54,8 +54,6 @@
     UIImagePickerControllerCameraFlashMode cameraFlashMode;
     UIImagePickerControllerQualityType videoQuality;
     BOOL showsZBarControls, tracksSymbols, enableCache;
-
-    ZBarHelpController *helpController;
     UIView *controls, *shutter;
     BOOL didHideStatusBar, rotating;
     ZBarCameraSimulator *cameraSim;
@@ -91,10 +89,6 @@
 
 // transform applied to the preview image.
 @property (nonatomic) CGAffineTransform cameraViewTransform;
-
-// display the built-in help browser.  the argument will be passed to
-// the onZBarHelp() javascript function.
-- (void) showHelpWithReason: (NSString*) reason;
 
 // capture the next frame and send it over the usual delegate path.
 - (void) takePicture;
